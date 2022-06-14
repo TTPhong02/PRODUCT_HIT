@@ -1,15 +1,22 @@
-
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home'
+import SignInForm from './components/SignInForm/SignInForm';
+import SignUpForm from './components/SignUpForm/SignUpForm';
+import ForgotPassword from './components/ForgotPassword/ForgotPassword';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+
+const clientId = "1098893047515-pa59vs62ouon8n66vkb884oab9fbt1ot.apps.googleusercontent.com";
 
 function App() {
   return (
-    <div className="App ">
-      <Header />
-      <Home />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/signIn' element={<SignInForm />} />
+        <Route path='/signUp' element={<SignUpForm />} />
+        <Route path='/forgotPassword' element={<ForgotPassword />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
