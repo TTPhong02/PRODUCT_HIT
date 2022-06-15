@@ -8,7 +8,7 @@ const SlideBar = () => {
     return (
       <div
         className={`${className} btn-next`}
-        style={{
+        style={{ 
           ...style,
           display: "block",
           background: "transperent",

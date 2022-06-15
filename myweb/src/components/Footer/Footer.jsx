@@ -1,6 +1,23 @@
 import React from 'react'
+import axios from 'axios'
+import { useState } from 'react'
 import "./footer.scss"
+import { addListener } from '@reduxjs/toolkit'
 const Footertest = () => {
+    const [sent,setSent] = useState(false)
+    const [text,setText] = useState("")
+
+    const handleSend = async() =>{
+        setSent(true)
+        try {
+            await axios.post('https://product-hit.herokuapp.com/api/v1/emailNotifications/signUp',{
+                text:"Cảm ơn bạn dã đăng kí",    
+            })
+        }
+        catch(error){
+            console.log(error);
+        }
+    }
   return (
     <div className='footer mx-auto grid grid-cols-12'>
         <div className="footer_content mr-2 col-span-4">
@@ -42,10 +59,10 @@ const Footertest = () => {
         <div className="footer_content mr-4  col-span-4">
             <h2 className=' font-bold '>Đăng kí nhận tin</h2>
             <p>Gửi email đăng kí để nhận thông báo mới nhất về khuyến mãi, sự kiện nổi bật dành cho khách hàng</p>
-            <div className="footer_content-email">
-                <input className='' type="text"placeholder='Nhập email' />
-                <button className=''>Đăng kí</button> 
-            </div>
+            <form className="footer_content-email" onSubmit={handleSend}>
+                <input  type="text" placeholder='Nhập email' onChange={ (e) => setText(e.targer.value)} />
+                <button type='submit'>Đăng kí</button> 
+            </form>
             <div className="footer_content-social">
                 <a href="" className='text-sky-500'>
                     <i className="fa-brands fa-facebook-square  m-3 cursor-pointer"></i>
