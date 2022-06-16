@@ -4,7 +4,7 @@ import "./signInForm.scss";
 import { useFormik } from "formik";
 import GoogleLogin from "react-google-login";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { facebook, google } from "fontawesome";
+import { google } from "fontawesome";
 import LoginFacebookReact from "react-facebook-login";
 import { Link } from "react-router-dom";
 
@@ -143,8 +143,6 @@ const SignInForm = () => {
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy="single_host_origin"
-            buttonText=""
-            style={{ borderRadius: "50%" }}
           ></GoogleLogin>
         </div>
       </div>

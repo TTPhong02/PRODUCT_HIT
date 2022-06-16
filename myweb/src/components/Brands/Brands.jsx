@@ -34,7 +34,7 @@ const Brands = () => {
 
   return (
     <div className="container-content">
-      <h1 className="title-content"># Những thương hiệu nổi tiếng</h1>
+      <h1 className="title-content"># Thương hiệu nổi tiếng</h1>
       <p className="desc-title">
         Chúng tôi luôn đem đến cho khách hàng những thương hiệu hàng đầu thế
         giới

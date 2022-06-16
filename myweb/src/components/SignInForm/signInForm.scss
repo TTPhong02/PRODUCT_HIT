@@ -106,15 +106,17 @@
       margin: 16px 0;
 
       .google-login {
-        box-shadow: none;
+        box-shadow: none !important;
+        margin-left: 22px;
+        width: 32px;
+        height: 32px;
 
         div {
-          margin-right: 0;
-          padding: 0;
+          margin-right: 0 !important;
+          padding: 0 !important;
 
           svg {
-            height: 32px;
-            width: 32px;
+            transform: scale(1.7) !important;
           }
         }
 
@@ -122,11 +124,14 @@
           display: none;
         }
       }
-  
+      
+      span {
+        width: 32px;
+        height: 32px;
+      }
       .kep-login-facebook {
         background-color: #1877F2;
         padding: 0;
-        margin-right: 22px;
         border: none;
         height: 32px;
         width: 32px;
