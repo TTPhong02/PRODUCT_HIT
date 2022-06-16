@@ -4,7 +4,8 @@ import './header.scss';
 import './Responsive.scss';
 import { Link } from 'react-router-dom';
 import Search from '../search/Search'
-const Header = (props) => {
+import { UserDown } from '../UserDown/UserDown';
+const Header = () => {
   return (
     <div className=' header grid grid-cols-12 items-center justify-between mx-auto '>
         <ul className=' header_menu col-span-7  '>
@@ -52,15 +53,20 @@ const Header = (props) => {
                     <Search/>
                 </div>
             </div>
-            <div className="header_option-item relative border-r border-zinc-400">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <div className="header_option-item_hovercart">
-                    <CartProduct/>
-                </div>
+            <div className="header_option-item relative border-r border-zinc-400">  
+                <Link to={'/cart'}>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div className="header_option-item_hovercart">
+                        <CartProduct/>
+                    </div>
+                </Link>
             </div>
             
-            <div className="header_option-item ">
+            <div className="header_option-item relative ">
                 <i class="fa-solid fa-user"></i>
+                <div className="header_option-item_down absolute">
+                    <UserDown/>
+                </div>
             </div>
         </div>
         <div className="col-span-3 header_list">

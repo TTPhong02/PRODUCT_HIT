@@ -1,6 +1,5 @@
 import React from "react";
 import "./home.scss";
-import "./ReponsiveHome.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SliderBar from "../../components/SlideBar/index";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";

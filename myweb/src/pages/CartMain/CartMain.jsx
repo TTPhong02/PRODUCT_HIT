@@ -7,6 +7,7 @@ import { ProductInCart } from '../../components/ProductInCart/Index';
 import { ProducInMainCart } from '../../components/ProductInCart/ProducInMainCart';
 import './CartMain.scss';
 import { Link } from 'react-router-dom';
+import { Voucher } from '../../components/Voucher/Voucher';
 export const CartMain = () => {
     const product = productData.getAllProducts()
     // const cartItems = useSelector(state => state.cartItems.value) 
@@ -47,6 +48,13 @@ export const CartMain = () => {
                 ))
                 
             }
+            <button className="cartmain_product_back">
+                <i className="fa-solid fa-arrow-left"></i>
+                 Tiếp tục xem Sản Phẩm
+            </button>
+            <button className="cartmain_product_update">
+                Cập Nhật Giỏ Hàng
+            </button>
         </div>
         <div className="cartmain_bill col-span-5">
             <div className="cartmain_bill_title">
@@ -67,14 +75,12 @@ export const CartMain = () => {
                 </div>
             </div>
             <div className="cartmain_bill_voucher">
-                <i class="fa-solid fa-ticket"></i>
+                <i class="fa-solid fa-ticket "></i>
                 Voucher Ưu Đãi
+                <div className="cartmain_bill_voucher_item">
+                    <Voucher/>
+                </div>
             </div>
-            {/* <div className="cartmain_bill_pay">
-                <Link to={"/"}>
-                    TIẾN HÀNH THANH TOÁN
-                </Link>
-            </div> */}
             <Link to={'/cart'} className='cartmain_bill_pay'>
                 <button className='cartmain_bill_pay_btn'>
                     TIẾN HÀNH THANH TOÁN

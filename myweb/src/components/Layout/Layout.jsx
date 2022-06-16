@@ -2,8 +2,7 @@ import React from 'react'
 import {BrowserRouter } from 'react-router-dom'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import Routers from '../../Routers/Routers'
-// import Routers from '../../routers/Routers'
+import Routers from '../../routers/Routers'
 const Layout = () => {
   return (
     <BrowserRouter>
